@@ -4,7 +4,7 @@ listing:
   contents: posts
   sort: "date desc"
   type: default
-  image-placeholder: "images/logo.png"
+  image-placeholder: "download.png"
   categories: true
   sort-ui: false
   filter-ui: false
@@ -12,4 +12,6 @@ page-layout: full
 title-block-banner: true
 ---
 
-I love music. This is cool.
+Welcome to my website showing off my R portfolio.
+
+I created this website to show off how smart I am.

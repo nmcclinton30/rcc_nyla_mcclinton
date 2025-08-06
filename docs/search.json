@@ -1,31 +1,17 @@
 [
   {
-    "objectID": "posts/Example_assignment/index.html",
-    "href": "posts/Example_assignment/index.html",
-    "title": "Example assignment",
+    "objectID": "posts/my_first_post/index.html",
+    "href": "posts/my_first_post/index.html",
+    "title": "My First post",
     "section": "",
-    "text": "This assignment engages you in the process of introspection. Your task is to use introspection to evaluate and describe your own mental imagery abilities. Attempt to answer the following kinds of questions. What is your mental imagery like? Do you have mental imagery for different kinds of senses? Is your mental imagery vivid and life-like or very different from normal perception? How would you describe your mental imagery?\nYou should write a minimum of 250 words, but feel free to write more. Submit your document on blackboard by the due date."
+    "text": "This is an example first post. Whatever you write here will appear inside your post.\nIt is possible to write lists:\nAnd make headers"
   },
   {
-    "objectID": "posts/Example_assignment/index.html#my-mental-imagery",
-    "href": "posts/Example_assignment/index.html#my-mental-imagery",
-    "title": "Example assignment",
-    "section": "My mental imagery",
-    "text": "My mental imagery\nMy mental imagery is like…"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "quartoCourseBlog",
-    "section": "",
-    "text": "I love music. This is cool.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMy First post\n\n\n\ngoals\n\ngeneral\n\n\n\n\n\n\n\n\n\nOct 21, 2022\n\n\nMatt Crump\n\n\n\n\n\n\n\n\n\n\n\n\nExample assignment\n\n\n\ngoals\n\ngeneral\n\n\n\n\n\n\n\n\n\nOct 21, 2022\n\n\nMatt Crump\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "The content on this page is from about.qmd. Edit that file to change how this page looks.\nHello! I am nyla.\nTry changing the template type from jolla to one of the other options for a different look and feel."
+    "objectID": "posts/my_first_post/index.html#this-is-a-second-level-heading",
+    "href": "posts/my_first_post/index.html#this-is-a-second-level-heading",
+    "title": "My First post",
+    "section": "This is a second level heading",
+    "text": "This is a second level heading\nYou can include images, and many other kinds of content.\nIf you are using the visual editor in Rstudio you can drag images onto the editor to insert them into the document. Otherwise, you need to place the image inside of the folder for this post, and then you can insert it to your post directly, like this:\n\nThe first image in a blog post will also be used on the listings page."
   },
   {
     "objectID": "readme.html",
@@ -112,17 +98,24 @@
     "text": "See this growing list of quarto resources for much, much more:\nhttps://github.com/mcanouil/awesome-quarto"
   },
   {
-    "objectID": "posts/my_first_post/index.html",
-    "href": "posts/my_first_post/index.html",
-    "title": "My First post",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Nyla McClinton’s R Portfolio",
     "section": "",
-    "text": "This is an example first post. Whatever you write here will appear inside your post.\nIt is possible to write lists:\nAnd make headers"
+    "text": "The content on this page is from about.qmd. Edit that file to change how this page looks.\nHello! I am nyla."
   },
   {
-    "objectID": "posts/my_first_post/index.html#this-is-a-second-level-heading",
-    "href": "posts/my_first_post/index.html#this-is-a-second-level-heading",
-    "title": "My First post",
-    "section": "This is a second level heading",
-    "text": "This is a second level heading\nYou can include images, and many other kinds of content.\nIf you are using the visual editor in Rstudio you can drag images onto the editor to insert them into the document. Otherwise, you need to place the image inside of the folder for this post, and then you can insert it to your post directly, like this:\n\nThe first image in a blog post will also be used on the listings page."
+    "objectID": "about.html#methods",
+    "href": "about.html#methods",
+    "title": "Nyla McClinton’s R Portfolio",
+    "section": "Methods",
+    "text": "Methods\n\nData Source\n\n2+2\n\n[1] 4\n\ninstall.packages(\"ggplot2\")\n\nInstalling package into '/cloud/lib/x86_64-pc-linux-gnu-library/4.5'\n(as 'lib' is unspecified)\n\nlibrary(ggplot2)\nggplot (mpg, aes (x = hwy))\n\n\n\n\n\n\n\n\nd"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "quartoCourseBlog",
+    "section": "",
+    "text": "Welcome to my website showing off my R portfolio.\nI created this website to show off how smart I am.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMy First post\n\n\n\ngoals\n\ngeneral\n\n\n\n\n\n\n\n\n\nOct 21, 2022\n\n\nMatt Crump\n\n\n\n\n\nNo matching items"
   }
 ]

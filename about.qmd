@@ -1,5 +1,5 @@
 ---
-title: "About Me"
+title: "Nyla McClinton's R Portfolio"
 image: profile.jpg
 about:
   template: jolla
@@ -34,6 +34,7 @@ Hello! I am nyla.
 install.packages("ggplot2")
 library(ggplot2)
 ggplot (mpg, aes (x = hwy))
+
 ```
 
 d
