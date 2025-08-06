@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "About Me"
 image: profile.jpg
 about:
   template: jolla
@@ -19,4 +19,21 @@ The content on this page is from `about.qmd`. Edit that file to change how this 
 
 Hello! I am nyla.
 
-Try changing the template type from `jolla` to one of the other options for a different look and feel.
+-   This is a bullet point
+
+1.  number
+
+# Introduction
+
+## Methods
+
+### Data Source
+
+```{r}
+2+2
+install.packages("ggplot2")
+library(ggplot2)
+ggplot (mpg, aes (x = hwy))
+```
+
+d
