@@ -133,7 +133,7 @@ ggplot(mydata, aes(x = gender, y = psychopathy)) +
     y = "Average Psychopathy Score",
     title = "Psychopathy Scores by Gender"
   ) +
-  theme_minimal()
+  theme_minimal() 
 
 ```
 
