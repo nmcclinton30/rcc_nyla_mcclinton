@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Nyla McClinton’s R Portfolio – quartoCourseBlog</title>
+<title>The Dark Triad – quartoCourseBlog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -125,7 +125,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link active" href="./about.html" aria-current="page"> 
-<span class="menu-text">Nyla McClinton’s R Portfolio</span></a>
+<span class="menu-text">The Dark Triad</span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/nmcclinton30/rcc_nyla_mcclinton"> <i class="bi bi-github" role="img">
@@ -151,67 +151,172 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     
 <!-- main -->
 <div class="quarto-about-jolla">
-  <img src="profile.jpg" class="about-image
+  <img src="Narc_photo.jpg" class="about-image
   round " style="height: 15em; width: 15em;">
  <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Nyla McClinton’s R Portfolio</h1>
+<h1 class="title">The Dark Triad</h1>
 </div>
 <div class="quarto-title-meta">
   </div>
 </header><main class="content" id="quarto-document-content">
-<p>The content on this page is from <code>about.qmd</code>. Edit that file to change how this page looks.</p>
-<p>Hello! I am nyla.</p>
-<ul>
-<li>This is a bullet point</li>
-</ul>
-<ol type="1">
-<li>number</li>
-</ol>
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
+<section id="introduction" class="level2">
+<h2 data-anchor-id="introduction">Introduction</h2>
+<p>Does gender predict differences in personality traits related to narcissism, psychopathy, and Machiavellianism (known as the Dark Triad)? This question is important to me because it explores how social and developmental factors may influence the expression of darker personality traits. Understanding these patterns could offer insights into how personality is shaped and expressed differently across populations, which is valuable for both psychological research and everyday social awareness.</p>
+<p>-To explore this question, I’m using a dataset from Kaggle that includes responses from an online personality test. While the dataset was not collected through a formal academic study, it uses validated psychological scales — including the Dirty Dozen (Jonason &amp; Webster, 2010) and the Hypersensitive Narcissism Scale (Hendin &amp; Cheek, 1997) — to measure traits related to narcissism, psychopathy, and Machiavellianism.</p>
+</section>
 <section id="methods" class="level2">
 <h2 data-anchor-id="methods">Methods</h2>
-<section id="data-source" class="level3">
-<h3 data-anchor-id="data-source">Data Source</h3>
+<section id="dataset-description" class="level4">
+<h4 data-anchor-id="dataset-description"><strong>Dataset Description</strong></h4>
+<p>The dataset used in this project comes from Kaggle, and contains responses to an online personality test centered around the <strong>Dark Triad traits</strong> — narcissism, psychopathy, and Machiavellianism — as well as <strong>hypersensitive narcissism</strong>.</p>
+<p>The data was collected through a publicly available quiz titled the <em>Dark Triad Personality Test</em>. Participants voluntarily completed the test online and answered items based on two validated psychological scales:</p>
+<ul>
+<li><p><strong>The Dirty Dozen</strong> (Jonason &amp; Webster, 2010), a 12-item measure used to assess narcissism, Machiavellianism, and psychopathy.</p></li>
+<li><p><strong>The Hypersensitive Narcissism Scale</strong> (Hendin &amp; Cheek, 1997), a 10-item scale measuring covert or vulnerable narcissism.</p></li>
+<li><p>After completing the test, participants self-reported their <strong>age</strong>, <strong>gender</strong>, <strong>country</strong>, and <strong>accuracy rating</strong> (i.e., how honestly or seriously they answered the questions, on a scale from 0 to 100).</p></li>
+</ul>
+</section>
+<section id="variables-included" class="level4">
+<h4 data-anchor-id="variables-included">Variables Included</h4>
+<p>The dataset includes</p>
+<ul>
+<li><strong>22 personality items</strong>:</li>
+</ul>
+<pre><code>-    10 HSNS items (HSNS1 to HSNS10)
+-    12 Dirty Dozen items (DDM1–DDM4, DDP1–DDP4, DDN1–DDN4)</code></pre>
+<ul>
+<li><strong>Demographic variables</strong>:</li>
+</ul>
+<pre><code>-    age
+-    gender (1 = Male, 2 = Female, 3 = Other)
+-    country
+-    accuracy (0–100)</code></pre>
+<ul>
+<li>Each item was rated on a <strong>5-point Likert scale</strong> (1 = Disagree, 3 = Neutral, 5 = Agree; 0 = unanswered).</li>
+</ul>
+</section>
+<section id="sample-size" class="level4">
+<h4 data-anchor-id="sample-size"><strong>Sample Size</strong></h4>
+<p>The data set includes 1,085 participants.</p>
+</section>
+<section id="tools" class="level4">
+<h4 data-anchor-id="tools">Tools</h4>
+<ul>
+<li><p>R and RStudio in Posit.Cloud</p></li>
+<li><p>GitHub</p></li>
+<li><p>Packages used: ggplot2</p></li>
+</ul>
+</section>
+<section id="approachpredictions" class="level4">
+<h4 data-anchor-id="approachpredictions">Approach/Predictions</h4>
+<ul>
+<li><p>I will assess whether gender is related to differences in personality traits associated with narcissism, psychopathy, and Machiavellianism, using data from the <strong>Dirty Dozen scale</strong>. I will calculate an average score for each trait using the relevant survey items.</p>
+<ul>
+<li><p><strong>Narcissism:</strong> DDN1 to DDN4</p></li>
+<li><p><strong>Psychopathy:</strong> DDP1 to DDP4</p></li>
+<li><p><strong>Machiavellianism:</strong> DDM1 to DDM4.</p></li>
+</ul></li>
+<li><p>To explore differences by gender, I will create dot plots that display individual participant scores for each trait, grouped by gender (1 = Male, 2 = Female, 3 = Other). These visualizations will help me observe patterns, such as whether one gender tends to have higher or more concentrated scores than others. I will focus on interpreting these visual trends to answer my question.</p></li>
+<li><p>I predict that male participants will have moderately higher average scores than female participants on all three Dark Triad traits: narcissism, psychopathy, and Machiavellianism.</p></li>
+</ul>
+</section>
+</section>
+<section id="results" class="level2">
+<h2 data-anchor-id="results">Results</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span><span class="sc">+</span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 4</code></pre>
-</div>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Installing package into '/cloud/lib/x86_64-pc-linux-gnu-library/4.5'
 (as 'lib' is unspecified)</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span> (mpg, <span class="fu">aes</span> (<span class="at">x =</span> hwy))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>mydata <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"nyla_data.csv"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>mydata<span class="sc">$</span>gender <span class="ot">&lt;-</span> <span class="fu">factor</span>(mydata<span class="sc">$</span>gender, <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>), <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Male"</span>, <span class="st">"Female"</span>,<span class="st">"Other"</span>))</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>scale1_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"DDN1"</span>, <span class="st">"DDN2"</span>, <span class="st">"DDN3"</span>, <span class="st">"DDN4"</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>mydata<span class="sc">$</span>narcissism <span class="ot">&lt;-</span> <span class="fu">rowMeans</span>(mydata[, scale1_vars], <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mydata, <span class="fu">aes</span>(<span class="at">x =</span> gender, <span class="at">y =</span> narcissism)) <span class="sc">+</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.3</span>, <span class="at">size=</span> <span class="fl">1.5</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">color =</span> <span class="st">"blue"</span>) <span class="sc">+</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Gender"</span>,</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Average Narcissism Score"</span>,</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Narcissism Scores by Gender"</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="about_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="about_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
-<p>d</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>mydata<span class="sc">$</span>gender <span class="ot">&lt;-</span> <span class="fu">factor</span>(mydata<span class="sc">$</span>gender, <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>), <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Male"</span>, <span class="st">"Female"</span>,<span class="st">"Other"</span>))</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>scale1_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"DDP1"</span>, <span class="st">"DDP2"</span>, <span class="st">"DDP3"</span>, <span class="st">"DDP4"</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>mydata<span class="sc">$</span>psychopathy <span class="ot">&lt;-</span> <span class="fu">rowMeans</span>(mydata[, scale1_vars], <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mydata, <span class="fu">aes</span>(<span class="at">x =</span> gender, <span class="at">y =</span> psychopathy)) <span class="sc">+</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.3</span>, <span class="at">size=</span> <span class="fl">1.5</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">color =</span> <span class="st">"darkgreen"</span>) <span class="sc">+</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Gender"</span>,</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Average Psychopathy Score"</span>,</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Psychopathy Scores by Gender"</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="about_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><br>
+</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>mydata<span class="sc">$</span>gender <span class="ot">&lt;-</span> <span class="fu">factor</span>(mydata<span class="sc">$</span>gender, <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>), <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Male"</span>, <span class="st">"Female"</span>,<span class="st">"Other"</span>)) </span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>scale1_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"DDM1"</span>, <span class="st">"DDM2"</span>, <span class="st">"DDM3"</span>, <span class="st">"DDM4"</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>mydata<span class="sc">$</span>machiavellianism <span class="ot">&lt;-</span> <span class="fu">rowMeans</span>(mydata[, scale1_vars], <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mydata, <span class="fu">aes</span>(<span class="at">x =</span> gender, <span class="at">y =</span> machiavellianism)) <span class="sc">+</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.3</span>, <span class="at">size=</span> <span class="fl">1.5</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">color =</span> <span class="st">"blue"</span>) <span class="sc">+</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Gender"</span>,</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Average Machiavellianism Score"</span>,</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Machiavellianism Scores by Gender"</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="about_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 
 
-</section>
-</section>
 </section>
 </main> 
   <hr class="about-sep">
    <div class="about-links">
-  <a href="https://twitter.com" class="about-link" rel="" target="">
-    <i class="bi bi-twitter"></i>
-     <span class="about-link-text">Twitter</span>
-  </a>
-  <a href="https://linkedin.com" class="about-link" rel="" target="">
+  <a href="/www.linkedin.com/in/nyla-mcclinton-bba58a356" class="about-link" rel="" target="">
     <i class="bi bi-linkedin"></i>
      <span class="about-link-text">LinkedIn</span>
   </a>
-  <a href="https://github.com" class="about-link" rel="" target="">
+  <a href="https://nmcclinton30.github.io/rcc_nyla_mcclinton/" class="about-link" rel="" target="">
     <i class="bi bi-github"></i>
      <span class="about-link-text">Github</span>
   </a>
