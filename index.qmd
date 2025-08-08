@@ -13,5 +13,3 @@ title-block-banner: true
 ---
 
 Welcome to my website showing off my R portfolio.
-
-I created this website to show off how smart I am.

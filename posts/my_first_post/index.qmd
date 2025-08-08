@@ -2,25 +2,14 @@
 title: "My Project"
 author: "Nyla McClinton"
 date: "2025-8-06"
-categories: [goals,general]
 ---
 
-This is an example first post. Whatever you write here will appear inside your post.
+Hi! I’m Nyla McClinton, a behavioral neuroscience major at Dominican University in Illinois.
 
-It is possible to write lists:
+This website was built as a portfolio project to explore psychological traits using real-world data and data tools in R. I analyzed responses from a personality dataset focused on the Dark Triad traits — narcissism, psychopathy, and Machiavellianism — and visualized how these traits vary across gender.
 
-1.  One
-2.  Two
-3.  Three
+This project showcases my skills in data organization and creating graphs in R using ggplot2, all published through Quarto.
 
-And make headers
-
-## This is a second level heading
-
-You can include images, and many other kinds of content.
-
-If you are using the visual editor in Rstudio you can drag images onto the editor to insert them into the document. Otherwise, you need to place the image inside of the folder for this post, and then you can insert it to your post directly, like this:
+Feel free to explore my visualizations and see how psychology and data analysis intersect.
 
 ![A heart for you.](v1033-b-04-b.jpg)
-
-The first image in a blog post will also be used on the listings page.
